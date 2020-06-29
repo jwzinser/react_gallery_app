@@ -11,7 +11,7 @@ const Header = ({Search}) => {
 
     return (
         <header>
-            <img id='logo' src='logo.png' alt='logo'></img>
+        <img src={require('./react.png')} alt="react"/>
             <SearchForm onSearch={Search} />
             <Nav onMenuClick={Search} />   
         </header>
