@@ -23,18 +23,18 @@ export class App extends Component {
     this.state = {
       photos: [],
       loading: true,
-      cats: [],
-      dogs: [],
-      computer: []
+      cars: [],
+      trains: [],
+      space: []
     }
   }
 
   /**calls search function when mounting the component
   */
   componentDidMount() {
-    this.performSearch('cats');
-    this.performSearch('dogs');
-    this.performSearch('computer');
+    this.performSearch('cars');
+    this.performSearch('trains');
+    this.performSearch('space');
     this.performSearch();
 
   }
@@ -43,9 +43,9 @@ export class App extends Component {
   */
   componentWillUnmount() {
     clearInterval(this.state.photos);
-    clearInterval(this.state.dogs);
-    clearInterval(this.state.cats);
-    clearInterval(this.state.computer);
+    clearInterval(this.state.cars);
+    clearInterval(this.state.trains);
+    clearInterval(this.state.space);
   }
 
   /**perform a search using axios API from Flickr
@@ -60,16 +60,16 @@ export class App extends Component {
       axios.get(url)
         .then((response) => {
           console.log("Aqui en el search");
-          topic === 'cats' ? this.setState({
-                            cats: response.data.photos.photo,
+          topic === 'cars' ? this.setState({
+                            cars: response.data.photos.photo,
                             loading: false
                           })
-          : topic === 'dogs' ? this.setState({
-                              dogs: response.data.photos.photo,
+          : topic === 'trains' ? this.setState({
+                              trains: response.data.photos.photo,
                               loading: false
                             }) 
-          : topic === 'computer' ? this.setState({
-                                  computer: response.data.photos.photo,
+          : topic === 'space' ? this.setState({
+                                  space: response.data.photos.photo,
                                   loading: false
                                 }) 
           : this.setState({
@@ -110,9 +110,9 @@ export class App extends Component {
                   </div>
                   )} 
                 />
-                <Route path='/tags/cats' render={() => <Gallery photos={ this.state.cats } />} />
-                <Route path='/tags/dogs' render={() => <Gallery photos={ this.state.dogs } />} />
-                <Route path='/tags/computer' render={() => <Gallery photos={ this.state.computer } />} />
+                <Route path='/tags/cars' render={() => <Gallery photos={ this.state.cars } />} />
+                <Route path='/tags/trains' render={() => <Gallery photos={ this.state.trains } />} />
+                <Route path='/tags/space' render={() => <Gallery photos={ this.state.space } />} />
                 <Route component={NotFound} />
               </Switch>
 
