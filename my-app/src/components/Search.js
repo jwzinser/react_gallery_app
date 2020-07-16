@@ -18,7 +18,7 @@ export default class Search extends Component {
                     <input className="search" type="search" onChange={this.onSearchChange} placeholder="Search Images" />
                     <i className="fa fa-search"></i>
                 </form>
-                <PictureSearch query={this.state.query} api={this.props.api} />
+                <PictureSearch query={this.state.query} />
             </div>
         )
     }

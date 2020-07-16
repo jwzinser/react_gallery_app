@@ -4,7 +4,7 @@ import apiKey from '../config.js';
 import React, { Component } from 'react';
 import Gallery from './Gallery';
 
-class Body extends Component {
+class PictureSearch extends Component {
   constructor() {
     super();
 //Initializing state variablesto store information
@@ -52,4 +52,4 @@ class Body extends Component {
   }
 }
 
-export default Body;
+export default PictureSearch;
