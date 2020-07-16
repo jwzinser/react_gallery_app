@@ -1,17 +1,14 @@
 import React from 'react';
+import Item from './Item';
 
-import GalleryItem from './Gallery-item';
 
 
-/**the main gallary component
- * @param photos that will be displayed
- * display the gallery
-*/
-const Gallery = ({photos}) => {
-    let newPhotos;
+const Gallery = (props) => {
+  const photos = props.data;
+  let newPhotos;
     if (photos.length > 0) {
         newPhotos = photos.map((item) => {
-        return <GalleryItem 
+        return <Item 
                     farm={item.farm}
                     server={item.server}
                     id={item.id}
@@ -23,11 +20,12 @@ const Gallery = ({photos}) => {
     } else {
       newPhotos = <p> no results </p>
     }
-    console.log(newPhotos);
 
     return(
       <div className="photo-list">
-        { newPhotos }
+        <ul>
+          {newPhotos}
+        </ul>
       </div> 
     );
 
