@@ -17,7 +17,7 @@ class NotFound extends Component {
         return (
             <div>
                 <h3> Error 404 </h3>
-                <p>No Results Found. Try again.</p>
+                <p> Wrong URL. Try again.</p>
                 <Link to={'/'}><p>Home</p></Link>
             </div>
         );
