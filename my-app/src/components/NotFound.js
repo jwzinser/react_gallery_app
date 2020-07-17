@@ -3,8 +3,6 @@ import {Link, withRouter } from 'react-router-dom';
 
 
 
-/**Generate a error message - 404
- */
 class NotFound extends Component {
     componentDidMount() {
         const path = `/error/404`;
@@ -19,7 +17,7 @@ class NotFound extends Component {
         return (
             <div>
                 <h3> Error 404 </h3>
-                <p>No Results Found. You enter a wrong URL or your search did not return any results. Please try again.</p>
+                <p>No Results Found. Try again.</p>
                 <Link to={'/'}><p>Home</p></Link>
             </div>
         );
