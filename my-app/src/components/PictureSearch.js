@@ -4,10 +4,11 @@ import apiKey from '../config.js';
 import React, { Component } from 'react';
 import Gallery from './Gallery';
 
+// Componenet to execute search given a query
+// photos a re saved on state property
 class PictureSearch extends Component {
   constructor() {
     super();
-//Initializing state variablesto store information
     this.state = {photos: [], loading: true, query: ''};
   }
   componentDidMount() {
@@ -39,7 +40,7 @@ class PictureSearch extends Component {
     }
   }
   render() {
-//Displaying loading gif image when loading
+
     return (
       <div className="container">
         <div className="photo-container">

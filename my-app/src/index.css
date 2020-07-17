@@ -201,10 +201,7 @@ a:link {
 a:visited {
   text-decoration: none
 }
-a:hover {
-  text-decoration: underline;
-  color: #FF0000;
-}
+
 
 .search-form {
   max-width: 460px;
@@ -246,9 +243,7 @@ input {
   color: #fff;
 }
 
-.main-nav .active,
-.main-nav a:hover,
-.search-form button:hover {
+.main-nav .active {
   background-color: #8c9092;
 }
 
